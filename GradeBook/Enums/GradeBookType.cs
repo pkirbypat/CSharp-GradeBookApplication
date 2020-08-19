@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-using GradeBook.Enums;
+using GradeBook.GradeBooks;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
