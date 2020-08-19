@@ -6,9 +6,8 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
 using GradeBook.GradeBooks;
-{
-    
-}
+//using GradeBook.Enums;
+  
 
 namespace GradeBook.UserInterfaces
 {
@@ -54,7 +53,7 @@ namespace GradeBook.UserInterfaces
             if(type == "standard")
                 gradeBook = new StandardGradeBook(name);
             else if(type == "ranked")
-                gradeBook = new RankedGradeBook(name);
+                gradeBook = new RandkedGradeBook(name);
             else
             {
                 Console.WriteLine("{0} is not a supported type.",type);

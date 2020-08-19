@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-using GradeBook.Enums;
+//using GradeBook.Enums;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
@@ -21,7 +21,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                throw new InvalidOperationsException("You must have 5 students to do ranked gradig.");
+                throw new InvalidOperationException ("You must have 5 students to do ranked gradig.");
             }
                 
             var threshold = (int) Math.Ceiling(Students.Count * 0.2);
@@ -29,11 +29,11 @@ namespace GradeBook.GradeBooks
 
             if (grades[threshold -1] <= averageGrade)
                 return 'A';
-            else if (grades[(threshold * 2) - 1] <= averageGrades)
+            else if (grades[(threshold * 2) - 1] <= averageGrade)
                 return 'B';
-            else if (grades[(threshold * 3) - 1] <= averageGrades)
+            else if (grades[(threshold * 3) - 1] <= averageGrade)
                 return 'C';
-            else if (grades[(threshold * 4) - 1] <= averageGrades)
+            else if (grades[(threshold * 4) - 1] <= averageGrade)
                 return 'D';
             else
                 return 'F';
