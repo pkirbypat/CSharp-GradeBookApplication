@@ -5,7 +5,8 @@ namespace GradeBook
 {
     class Program
     {
-        static void Main(string[] args)
+        //static void Main(string[] args)
+        static void Main(char args)
         {
             Console.WriteLine("#=======================#");
             Console.WriteLine("# Welcome to GradeBook! #");
