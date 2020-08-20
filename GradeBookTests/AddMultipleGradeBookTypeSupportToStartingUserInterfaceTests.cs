@@ -18,7 +18,7 @@ namespace GradeBookTests
         public void IncreasePartsCheckToThreeTest()
         {
             //Bypass Test if Create Command for Weighted GPA has been started
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
             Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();
@@ -62,7 +62,7 @@ namespace GradeBookTests
         public void UpdateValidationMessageTest()
         {
             //Bypass Test if Create Command for Weighted GPA has been started
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
             Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();
@@ -106,7 +106,7 @@ namespace GradeBookTests
         public void InstantiateGradeBookTest()
         {
             //Bypass Test if Create Command for Weighted GPA has been started
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
             Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();

@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using GradeBook;
 using GradeBook.Enums;
+using GradeBook.GradeBooks;
 using Xunit;
 
 namespace GradeBookTests
@@ -19,8 +20,8 @@ namespace GradeBookTests
         public void CreateGetLetterGradeOverrideTests()
         {
             // Setup Test
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -34,7 +35,7 @@ namespace GradeBookTests
 
             //Test if exception is thrown when there are less than 5 students.
             var exception = Record.Exception(() => method.Invoke(gradeBook, new object[] { 100 }));
-            Assert.True(exception != null, "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't throw an exception when less than 5 students have grades.");
+            Assert.True(exception != null); //, "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't throw an exception when less than 5 students have grades.");
 
             //Setup successful conditions
             var students = new List<Student>
@@ -64,7 +65,7 @@ namespace GradeBookTests
             gradeBook.GetType().GetProperty("Students").SetValue(gradeBook, students);
 
             //Test if A is given when input grade is in the top 20%.
-            Assert.True((char)method.Invoke(gradeBook, new object[] { 0 }) == 'F', "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an F when a student failed to earn a higher grade.");
+            Assert.True((char)method.Invoke(gradeBook, new object[] { 0 }) == 'F'); //, "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an F when a student failed to earn a higher grade.");
 
             // Read file for to confirm GetLetterGrade has been overriden
             // Get appropriate path to file for the current operating system
@@ -80,11 +81,11 @@ namespace GradeBookTests
                 rgx = new Regex(pattern);
                 matches = rgx.Matches(input);
 
-                Assert.True(matches.Count == 0, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override. If a higher grade isn't assigned `RankedGradeBook.GetLetterGrade` should return 'F'.");
+                Assert.True(matches.Count == 0); //, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override. If a higher grade isn't assigned `RankedGradeBook.GetLetterGrade` should return 'F'.");
             }
             else
             {
-                Assert.True(false, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
+                Assert.True(false); //, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
             }
         }
 
@@ -95,8 +96,8 @@ namespace GradeBookTests
         public void TopTwentyPercentGetAnATests()
         {
             // Setup Test
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -152,11 +153,11 @@ namespace GradeBookTests
                 rgx = new Regex(pattern);
                 matches = rgx.Matches(input);
 
-                Assert.True(matches.Count == 0, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override. If a higher grade isn't assigned `RankedGradeBook.GetLetterGrade` should return 'F'.");
+                Assert.True(matches.Count == 0); //, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override. If a higher grade isn't assigned `RankedGradeBook.GetLetterGrade` should return 'F'.");
             }
             else
             {
-                Assert.True(false, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
+                Assert.True(false);  //, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
             }
         }
 
@@ -167,8 +168,8 @@ namespace GradeBookTests
         public void SecondTwentyPercentGetABTests()
         {
             // Setup Test
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -218,8 +219,8 @@ namespace GradeBookTests
         public void ThirdTwentyPercentGetACTests()
         {
             // Setup Test
-            var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
