@@ -86,7 +86,7 @@ namespace GradeBookTests
                         output = consolestream.ToString().ToLower();
 
                         //Test that message written to console is correct.
-                        Assert.True(output.Contains("command not valid, create requires a name and type of gradebook."); //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write 'Command not valid, Create requires a name and type of gradebook.' to the console when the create command didn't contain both a name and type.");
+                        Assert.True(output.Contains("create requires a name and type of gradebook."); //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write 'Command not valid, Create requires a name and type of gradebook.' to the console when the create command didn't contain both a name and type.");
                     }
                 }
             }
