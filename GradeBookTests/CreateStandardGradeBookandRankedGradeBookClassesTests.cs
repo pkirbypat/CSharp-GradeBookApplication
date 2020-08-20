@@ -101,13 +101,13 @@ namespace GradeBookTests
             var gradebook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
 
             // Assert RankedGradeBook was found in the GradeBook.GradeBooks namespace
-            Assert.True(gradebook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(gradebook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
         
             // Test to make sure the enum RankedGradeBook is public.
-            Assert.True(gradebook.IsPublic, "`GradeBook.GradeBooks.RankedGradeBook` exists, but isn't `public`.");
+            Assert.True(gradebook.IsPublic); //, "`GradeBook.GradeBooks.RankedGradeBook` exists, but isn't `public`.");
         
             // Assert that RankedGradeBook's BaseType is BaseGradeBook
-            Assert.True(gradebook.BaseType == typeof(BaseGradeBook), "`GradeBook.GradeBooks.RankedGradeBook` doesn't inherit `BaseGradeBook`");
+            Assert.True(gradebook.BaseType == typeof(BaseGradeBook); //, "`GradeBook.GradeBooks.RankedGradeBook` doesn't inherit `BaseGradeBook`");
         }
 
         /// <summary>
