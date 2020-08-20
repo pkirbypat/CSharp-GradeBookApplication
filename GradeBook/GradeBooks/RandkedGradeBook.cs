@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using GradeBook.Enums;
   
-namespace GradeBook.GradeBooks.GradeBook.GradeBook
+namespace GradeBook.GradeBooks.GradeBook
 {
     public class RandkedGradeBook : BaseGradeBook
     {
