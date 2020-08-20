@@ -95,7 +95,7 @@ namespace GradeBookTests
             // Get appropriate path to file for the current operating system
             var filePath = ".." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar + ".." + Path.DirectorySeparatorChar + "GradeBook" + Path.DirectorySeparatorChar + "GradeBooks" + Path.DirectorySeparatorChar + "RankedGradeBook.cs";
             // Assert RankedGradeBook is in the GradeBooks folder
-            Assert.True(File.Exists(filePath), "`RankedGradeBook.cs` was not found in the `GradeBooks` folder.");
+            Assert.True(File.Exists(filePath)); //, "`RankedGradeBook.cs` was not found in the `GradeBooks` folder.");
         
             // Get GradeBookType from the GradeBook.Enums namespace
             var gradebook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
@@ -118,17 +118,17 @@ namespace GradeBookTests
         {
             // Get RankedGradeBook from the GradeBook.GradeBooks namespace
             var gradebook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(gradebook != null, "`RankedGradeBook` wasn't found in the `GradeBook.GradeBooks` namespace.");
+            Assert.True(gradebook != null); //, "`RankedGradeBook` wasn't found in the `GradeBook.GradeBooks` namespace.");
 
             // Get RankedGradeBook's first constructor (should be the only constructor)
             var constructor = gradebook.GetConstructors().FirstOrDefault();
 
             // Assert a constructor was found
-            Assert.True(constructor != null, "No constructor found for GradeBook.GradeBooks.StardardGradeBook.");
+            Assert.True(constructor != null); //, "No constructor found for GradeBook.GradeBooks.StardardGradeBook.");
 
             // Get GradeBookType from the GradeBook.Enums namespace
             var gradebookEnum = TestHelpers.GetUserType("GradeBook.Enums.GradeBookType");
-            Assert.True(gradebookEnum != null, "`GradeBookType` wasn't found in the `GradeBook.Enums` namespace.");
+            Assert.True(gradebookEnum != null); //, "`GradeBookType` wasn't found in the `GradeBook.Enums` namespace.");
 
             // Get constructor's parameters
             var parameters = constructor.GetParameters();

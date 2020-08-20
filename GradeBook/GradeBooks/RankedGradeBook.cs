@@ -6,11 +6,11 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using GradeBook.Enums;
   
-namespace GradeBook.GradeBooks.GradeBook
+namespace GradeBook.GradeBooks
 {
-    public class RandkedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
-        public RandkedGradeBook(string name) : base(name)
+        public RankedGradeBook(string name) : base(name)
         {
             Type = GradeBookType.Ranked;
         }

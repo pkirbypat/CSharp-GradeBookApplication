@@ -36,7 +36,7 @@ namespace GradeBookTests
             var parameters = constructor.GetParameters();
 
             // Test that the parameters match what is expected at this point
-            Assert.True(parameters.Count() == 2 && parameters[0].ParameterType == typeof(string) && parameters[1].ParameterType == typeof(bool), "`GradeBook.GradeBooks.BaseGradeBook`'s constructor doesn't have the correct parameters. It should be a `string` and then a `bool`.");
+            Assert.True(parameters.Count() == 2 && parameters[0].ParameterType == typeof(string) && parameters[1].ParameterType == typeof(bool)); //, "`GradeBook.GradeBooks.BaseGradeBook`'s constructor doesn't have the correct parameters. It should be a `string` and then a `bool`.");
 
             // Note: this doesn't actually test that the refactor was done in all places, code won't compile otherwise once the bool is added to the constructor.
         }

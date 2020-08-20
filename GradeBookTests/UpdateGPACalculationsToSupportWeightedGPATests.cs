@@ -30,7 +30,7 @@ namespace GradeBookTests
 
             var parameters = ctor.GetParameters();
             object gradeBook = null;
-            Assert.True(parameters.Count() == 2 && parameters[0].ParameterType == typeof(string) && parameters[1].ParameterType == typeof(bool), "`GradeBook.GradeBooks.BaseGradeBook`'s constructor doesn't have the correct parameters. It should be a `string` and a `bool`.");
+            Assert.True(parameters.Count() == 2 && parameters[0].ParameterType == typeof(string) && parameters[1].ParameterType == typeof(bool)); //, "`GradeBook.GradeBooks.BaseGradeBook`'s constructor doesn't have the correct parameters. It should be a `string` and a `bool`.");
 
             gradeBook = Activator.CreateInstance(standardGradeBook, "WeightedTest", true);
             MethodInfo method = standardGradeBook.GetMethod("GetGPA");
