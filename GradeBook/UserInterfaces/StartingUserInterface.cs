@@ -93,6 +93,8 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine("Help - Displays all accepted commands.");
             Console.WriteLine();
             Console.WriteLine("Quit - Exits the application");
+            Console.WriteLine();
+            Console.WriteLine("Command not valid, create requires a name and type of gradebook.")
         }
     }
 }

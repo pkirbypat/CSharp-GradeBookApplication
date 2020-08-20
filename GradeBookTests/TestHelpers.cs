@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Linq;
+using GradeBook.Enums;
+using GradeBook.GradeBoks;
+using GradeBook.UserInterfaces;
 
 namespace GradeBookTests
 {

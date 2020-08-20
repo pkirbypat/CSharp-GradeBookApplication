@@ -7,7 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace GradeBook.GradeBooks
+namespace GradeBook.GradeBooks.GradeBook
 {
     public class StandardGradeBook : BaseGradeBook
     {
