@@ -107,7 +107,7 @@ namespace GradeBookTests
             Assert.True(gradebook.IsPublic); //, "`GradeBook.GradeBooks.RankedGradeBook` exists, but isn't `public`.");
         
             // Assert that RankedGradeBook's BaseType is BaseGradeBook
-            Assert.True(gradebook.BaseType == typeof(BaseGradeBook); //, "`GradeBook.GradeBooks.RankedGradeBook` doesn't inherit `BaseGradeBook`");
+            Assert.True(gradebook.BaseType == typeof(BaseGradeBook));
         }
 
         /// <summary>
