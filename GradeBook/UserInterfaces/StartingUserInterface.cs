@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
 using GradeBook.GradeBooks;
-//using GradeBook.Enums;
+
   
 
 namespace GradeBook.UserInterfaces
@@ -94,7 +94,7 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine();
             Console.WriteLine("Quit - Exits the application");
             Console.WriteLine();
-            Console.WriteLine("Command not valid, create requires a name and type of gradebook.")
+            Console.WriteLine("Command not valid, create requires a name and type of gradebook.");
         }
     }
 }

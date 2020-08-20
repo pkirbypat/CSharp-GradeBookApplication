@@ -19,7 +19,7 @@ namespace GradeBookTests
         {
             //Bypass Test if Create Command for Weighted GPA has been started
             var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null) //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();
 
@@ -42,7 +42,7 @@ namespace GradeBookTests
                         output = consolestream.ToString().ToLower();
 
                         //Test that message written to console when parts.length != 3.
-                        Assert.True(output.Contains("command not valid")) //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write a message to the console when the create command didn't contain both a name and type.");
+                        Assert.True(output.Contains("command not valid")); //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write a message to the console when the create command didn't contain both a name and type.");
                     }
                 }
             }
@@ -63,7 +63,7 @@ namespace GradeBookTests
         {
             //Bypass Test if Create Command for Weighted GPA has been started
             var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null) //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();
 
@@ -86,7 +86,7 @@ namespace GradeBookTests
                         output = consolestream.ToString().ToLower();
 
                         //Test that message written to console is correct.
-                        Assert.True(output.Contains("command not valid, create requires a name and type of gradebook.") //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write 'Command not valid, Create requires a name and type of gradebook.' to the console when the create command didn't contain both a name and type.");
+                        Assert.True(output.Contains("command not valid, create requires a name and type of gradebook."); //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't write 'Command not valid, Create requires a name and type of gradebook.' to the console when the create command didn't contain both a name and type.");
                     }
                 }
             }
@@ -107,7 +107,7 @@ namespace GradeBookTests
         {
             //Bypass Test if Create Command for Weighted GPA has been started
             var rankedGradeBook = TestHelpers.GetUserType("GradeBook.GradeBooks.RankedGradeBook");
-            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var ctor = rankedGradeBook.GetConstructors().FirstOrDefault();
 
@@ -131,7 +131,7 @@ namespace GradeBookTests
                         StartingUserInterface.CreateCommand("create test standard");
                         output = consolestream.ToString().ToLower();
 
-                        Assert.True(output.Contains("standard"), "`GradeBook.UserInterfaces.StartingUserInterface` didn't create a `StandardGradeBook` when 'standard' was used with the `CreateCommand`.");
+                        Assert.True(output.Contains("standard");//, "`GradeBook.UserInterfaces.StartingUserInterface` didn't create a `StandardGradeBook` when 'standard' was used with the `CreateCommand`.");
                     }
                 }
             }
@@ -158,7 +158,7 @@ namespace GradeBookTests
                         StartingUserInterface.CreateCommand("create test ranked");
                         output = consolestream.ToString().ToLower();
 
-                        Assert.True(output.Contains("ranked"), "`GradeBook.UserInterfaces.StartingUserInterface` didn't create a `RankedGradeBook` when 'ranked' was used with the `CreateCommand`.");
+                        Assert.True(output.Contains("ranked"); //, "`GradeBook.UserInterfaces.StartingUserInterface` didn't create a `RankedGradeBook` when 'ranked' was used with the `CreateCommand`.");
                     }
                 }
             }
@@ -182,7 +182,7 @@ namespace GradeBookTests
                     StartingUserInterface.CreateCommand("create test incorrect");
                     output = consolestream.ToString().ToLower();
 
-                    Assert.True(output.Contains("incorrect is not a supported type of gradebook, please try again"), "`GradeBook.UserInterfaces.StartingUserInterface` write the entered type followed by ' is not a supported type of gradebook, please try again' when an unknown value was used with the `CreateCommand`.");
+                    Assert.True(output.Contains("incorrect is not a supported type of gradebook, please try again"); //, "`GradeBook.UserInterfaces.StartingUserInterface` write the entered type followed by ' is not a supported type of gradebook, please try again' when an unknown value was used with the `CreateCommand`.");
                 }
             }
             finally
@@ -220,7 +220,7 @@ namespace GradeBookTests
                             return;
 
                         // Test if help command message is correct
-                        Assert.True(output.Contains("create 'name' 'type' - creates a new gradebook where 'name' is the name of the gradebook and 'type' is what type of grading it should use."), "`GradeBook.UserInterfaces.StartingUserInterface.HelpCommand` didn't write \"Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use.\"");
+                        Assert.True(output.Contains("create 'name' 'type' - creates a new gradebook where 'name' is the name of the gradebook and 'type' is what type of grading it should use."); //, "`GradeBook.UserInterfaces.StartingUserInterface.HelpCommand` didn't write \"Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use.\"");
                     }
                 }
             }
