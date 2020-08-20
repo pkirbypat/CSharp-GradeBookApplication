@@ -21,7 +21,7 @@ namespace GradeBookTests
         {
             // Setup Test
             var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
-            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -97,7 +97,7 @@ namespace GradeBookTests
         {
             // Setup Test
             var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
-            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -169,7 +169,7 @@ namespace GradeBookTests
         {
             // Setup Test
             var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
-            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
@@ -220,7 +220,7 @@ namespace GradeBookTests
         {
             // Setup Test
             var rankedGradeBook = TestHelpers.GetUserType("RankedGradeBook");
-            Assert.True(rankedGradeBook != null); //, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(rankedGradeBook != null, "`RankedGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
 
             var constructor = rankedGradeBook.GetConstructors().FirstOrDefault();
             var parameters = constructor.GetParameters();
